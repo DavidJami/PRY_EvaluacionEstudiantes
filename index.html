@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Evaluacion de Estudiantes</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="./public/css/style.css" />
+    
+
+
+</head>
+<body>
+
+
+    <div class="container py-4">
+      <div class="page-header p-4 shadow-soft mb-4">
+        <h1 class="mb-1">Sistema de Evaluacion de Estudiantes</h1>
+        <p class="mb-0 opacity-75">
+          Clasificacion de notas, promedio y estado del curso.
+        </p>
+      </div>
+
+      <div
+        id="alert_estado"
+        class="alert alert-light border shadow-soft mb-4"
+        role="alert"
+      >
+        <div
+          class="d-flex flex-wrap justify-content-between align-items-center gap-2"
+        >
+          <div>
+            Estado del curso:
+            <strong id="estado_curso">SIN EVALUAR</strong>
+          </div>
+          <div>
+            Promedio:
+            <span class="badge bg-primary" id="promedio_curso">0.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3 mb-4">
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-soft h-100">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Aprobados</h5>
+                <span class="badge bg-success">7 - 10</span>
+              </div>
+              <div class="display-5 mt-2" id="total_aprobados">0</div>
+              <small class="text-muted"
+                >Estudiantes Aprobados</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-soft h-100">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Supletorio</h5>
+                <span class="badge bg-warning text-dark">5 - 6</span>
+              </div>
+              <div class="display-5 mt-2" id="total_supletorio">0</div>
+              <small class="text-muted"
+                >Estudiantes a Supletorio</small
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4">
+          <div class="card border-0 shadow-soft h-100">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center">
+                <h5 class="card-title mb-0">Reprobados</h5>
+                <span class="badge bg-danger">0 - 4 </span>
+              </div>
+              <div class="display-5 mt-2" id="total_reprobados">0</div>
+              <small class="text-muted"
+                >Estudiantes Reprobados</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card border-0 shadow-soft">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Detalle de notas</h5>
+
+          <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>#</th>
+                  <th>Nota</th>
+                  <th>Clasificacion</th>
+                </tr>
+              </thead>
+              <tbody id="tbody_notas"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./public/js/script.js"></script>
+
+</body>
+</html>

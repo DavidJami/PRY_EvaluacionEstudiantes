@@ -1,0 +1,13 @@
+body {
+  background: #f5f7fb;
+}
+
+.page-header {
+  background: linear-gradient(135deg, #62e173, #596de2);
+  color: #fff;
+  border-radius: 16px;
+}
+
+.shadow-soft {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
